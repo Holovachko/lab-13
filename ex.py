@@ -2,10 +2,9 @@ import math
 
 
 class TVector2D:
-    def __init__(self, x=0, y =0, *args):
+    def __init__(self, x=0, y =0):
         self.x = x
         self.y = y
-        self.vector = list(args)
 
     @property
     def x(self):
@@ -23,7 +22,7 @@ class TVector2D:
 
 
     def vectors_len(self):
-        return len(self.vector)
+        return int(math.sqrt(self.x**2 + self.y**2)+1)
     def rationing_vector(self):
         return self.x/self.vectors_len(),self.y/self.vectors_len()
 
