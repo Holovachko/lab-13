@@ -46,8 +46,8 @@ print(v.rationing_vector())
 
 
 class TVector3D(TVector2D):
-    def __init__(self, x, y, z, *args):
-        super().__init__(x, y, *args)
+    def __init__(self, x, y, z):
+        super().__init__(x, y)
         self.z = z
     def vector3D_len(self):
         return math.sqrt(self.x**2+self.y**2+self.z**2)
